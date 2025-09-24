@@ -1,0 +1,36 @@
+{
+  "name": "gllm",
+  "version": "0.1.0",
+  "description": "Git → Markdown exporter optimized for feeding repositories to LLMs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "gllm": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build",
+    "start": "ts-node src/index.ts"
+  },
+  "keywords": [
+    "git",
+    "llm",
+    "markdown",
+    "export",
+    "gllm"
+  ],
+  "author": "SomeMedic",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
