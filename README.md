@@ -1,5 +1,7 @@
 # GLLM: Git to LLM Markdown Exporter
 
+## Version 0.2.0 is live now
+
 [![NPM Version](https://img.shields.io/npm/v/gllm.svg)](https://www.npmjs.com/package/gllm)
 [![License](https://img.shields.io/npm/l/gllm.svg)](https://github.com/SomeMedic/gllm/blob/main/LICENSE)
 
