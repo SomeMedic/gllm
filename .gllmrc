@@ -1,0 +1,36 @@
+# GLLM Configuration File
+# Simple key=value format
+
+# Output settings
+output.directory=gllm_export
+output.includeFiles=true
+output.maxFileSize=500000
+
+# Branch settings
+branches.selection=main,develop
+branches.commitsPerBranch=50
+
+# Security settings
+security.secretScan=true
+# Custom patterns (uncomment and modify as needed)
+# security.customPatterns[0].name=Custom API Key
+# security.customPatterns[0].pattern=api_key_[a-zA-Z0-9]{32}
+
+# Performance settings
+performance.concurrency=6
+performance.incremental=true
+
+# Filter settings
+filters.exclude=node_modules,.git,dist
+filters.excludePatterns=\.log$,\.tmp$
+filters.includePatterns=\.(ts|js|py|java|go|rs)$
+
+# Metadata settings
+metadata.includeStats=true
+metadata.includeTimeline=true
+metadata.includeDependencies=false
+
+# Examples of other settings:
+# branches.selection=all
+# output.maxFileSize=1000000
+# performance.concurrency=8

@@ -2,10 +2,10 @@
   "name": "gllm",
   "version": "0.1.1",
   "description": "Git → Markdown exporter optimized for feeding repositories to LLMs",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/cli.js",
+  "types": "dist/cli.d.ts",
   "bin": {
-    "gllm": "dist/index.js"
+    "gllm": "dist/cli.js"
   },
   "files": [
     "dist"
@@ -14,7 +14,7 @@
     "build": "tsc -p tsconfig.json",
     "clean": "rm -rf dist",
     "prepublishOnly": "npm run build",
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/cli.ts"
   },
   "keywords": [
     "git",

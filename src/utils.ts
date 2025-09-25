@@ -1,12 +1,4 @@
-import { execSync } from "child_process";
-
-export function run(cmd: string, cwd?: string): string {
-  try {
-    return execSync(cmd, { cwd, stdio: ["ignore", "pipe", "pipe"], encoding: "utf-8", maxBuffer: 50 * 1024 * 1024 });
-  } catch (e: any) {
-    throw new Error(`Command failed: ${cmd}\n${e?.message || String(e)}`);
-  }
-}
+// Utility functions for file naming and language detection
 
 export function safeName(s: string) {
   return s.replace(/[/\\\s]+/g, "__").replace(/[^0-9A-Za-z._\-@]/g, "");

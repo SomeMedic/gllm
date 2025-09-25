@@ -1,0 +1,43 @@
+{
+  "output": {
+    "directory": "gllm_export",
+    "includeFiles": true,
+    "maxFileSize": 500000
+  },
+  "branches": {
+    "selection": "main,develop",
+    "commitsPerBranch": 50
+  },
+  "security": {
+    "secretScan": true,
+    "customPatterns": [
+      {
+        "name": "Custom API Key",
+        "pattern": "api_key_[a-zA-Z0-9]{32}"
+      }
+    ]
+  },
+  "performance": {
+    "concurrency": 6,
+    "incremental": true
+  },
+  "filters": {
+    "exclude": [
+      "node_modules",
+      ".git",
+      "dist"
+    ],
+    "excludePatterns": [
+      "\\.log$",
+      "\\.tmp$"
+    ],
+    "includePatterns": [
+      "\\.(ts|js|py|java|go|rs)$"
+    ]
+  },
+  "metadata": {
+    "includeStats": true,
+    "includeTimeline": true,
+    "includeDependencies": false
+  }
+}
